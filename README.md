@@ -2,11 +2,11 @@
 ## Biography of Leeanna Carter
 
 ### General background
-Leeanna Carter was born in the late 90's to parent whom originated from South America. She grew up in Central London with 5 brothers and sisters where she attended primary and secondary school.  Leeanna's profession currently lies within
-the contruction industry managing data and information associated to a local government organisation.
+Leeanna Carter was born in the late 90's to parents whom originated from South America. She grew up in Central London with 5 brothers and sisters where she attended primary and secondary school.  Leeanna's profession currently lies within
+the contruction industry managing data and information associated to a local government organisation land and property assets.
 
 ### Education bckground
-Initially, Leeanna's interest were in business and media realtions which led her to study such subjects in secondary school. Her academic interests swayed towards business administration management which she studed in college for two years. Subsequently, Leeanna became a distance learner student studying GIS part time at the University of Leeds, and is half way through her second year. She became facinated with the software when she began her first job in local government and is determined to graduate in 2020. 
+Initially, Leeanna's interest were in business and media realtions which led her to study such subjects in secondary school. Her academic interests swayed towards business administration management of which she studed in college for two years. Subsequently, Leeanna became a distance learner student studying GIS part time at the University of Leeds, and is half way through her second year. She became facinated with the software when she began her first job in local government and is determined to extend her skillsets and knowledge of the software. 
 
 ### Hobbies
 Leeanna's main hobbies are:
