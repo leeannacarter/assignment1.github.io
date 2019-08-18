@@ -14,7 +14,7 @@ Leeanna's main hobbies are:
 * Attending food festivals within London
 * Reading personal development books 
 * Travelling 
-* Swimming to stay fit
+* Swimming 
 
 _**Future endeavors**_
 
@@ -22,8 +22,10 @@ Leeanna aspires to graduate in GIS with a satisfactory grade and work towards be
 
 ## Python Agent Model
 
-Leeanna has created an agent base model programme which autonomise actions and interactions of agents within a static environment. For instance, a hypothetical scenario of modelling animal presence and interations within a farm depicts the framework of an agent base modelling. The Agent base model contains 10 ageents that interact with one another, eat and move randomly within its environment space accordingly to python syntax's. Basic python sntaxs have been used to create object orientated procedures to construct the agent model.
-Sytax created within the agents are established in the below table. Thus, the outcome created models 10 agents moving randomly 100 times within a 255x255 size square grid, simutaneously eating part of the environment away and maintaning an average distance from each other (if within 20 units away), thus iteracting with one anthoer to prevent such case.
+Leeanna has programmed an agent base model which autonomize actions and interactions between agents within a static environment. For instance, a hypothetical scenario of modelling animal presence and interations within a farm depicts the framework of an agent base model. Basic python syntax's have been implemented to create object orientated procedures to construct the agent model. The agent base model contains 10 ageents that interact with one another, eat and move randomly within its environment space accordingly to the python implemented syntax's. Thus, the outcome created models 10 agents moving randomly 100 times within a 255x255 size square grid, simutaneously eating part of the environment away and maintaning an average distance from each other (if within 20 units away).
+
+The below objects were used to finalize the model.
 
 Variables | Containers | Functions/ Methods | Classes
 --------- | -----------| -------------------|--------
+To assign values to | stores information as an index | creates rules to iniate a process | stores the rules 
