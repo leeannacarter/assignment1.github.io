@@ -26,10 +26,10 @@ Leeanna is determine to graduate in GIS with a satisfactory grade to assist in g
 
 Leeanna has programmed an agent base model which autonomize actions and interactions between agents within a static environment. For instance, a hypothetical scenario of modelling animal presence and interations within a farm depicts the framework of an agent base model. Basic python scrips have been implemented to create object orientated procedures to construct the agent model. Thus, the agent base model contains 10 agents that interact with one another, move randomly (100 iterations), maintain an average distance between one another (if between and equal to 20 units), and simutaneously eating the environment space (raster gid) accordingly to the python implemented syntax's.
 
-The below object were mainly used to create and finalize the model: [https://leeannacarter.github.io/assignment1.github.io/. ]
+The below object were mainly used to create and finalize the model.
 
 Variables | Containers | Functions | Classes
 --------- | -----------| -------------------|--------
 stores values to an identity | stores information as an index within tuples, lists, dictionaries and sets | creates methodical rules to iniate a process | stores functions within a to create a template of an process.
 
-Click on the link to access the agent base model's python source codes. 
+Click on the link to access the agent base model's python source codes: [https://leeannacarter.github.io/assignment1.github.io/.]
