@@ -1,23 +1,24 @@
-#imported random module to assist in generating random numbers for x and y locations.
+# Imported random module to assist in generating random numbers for x and y locations.
 import random
 
-#created class agent, setting x and y variables to the random function.
-#appended the environment values within this class to share from my main model.
-#appended the agents list values within this class to link with the agents.
-#store saves the eaten environment for each agent.
+# Created class agent, setting x and y variables to the random function.
+# Appended the environment values within this class to share from my main model.
+# Appended the agents list values within this class to link with the agents.
+# Store saves the eaten environment for each agent.
 class Agent:
     def __init__(self, environment, agents):
         self.x = random.randint(0,99)
         self.y = random.randint(0,99)
         self.environment = environment
         self.agents = agents
-        self.store = 0 
+        self.store = 0
+        self.neighbourhood = 20
                 
-#  returns the outcome of the x and y variables.   
+# Returns the outcome of the x and y variables.   
     def get_xy(self):
         return self.x, self.y
                  
-# moves the agents twice.
+# Moves the agents twice.
     def move(self):
         if random.random() < 0.5:
             self.y = (self.y + 1) % 100
@@ -29,16 +30,15 @@ class Agent:
         else:
             self.x = (self.x - 1) % 100
 
-# eats 10  values within an envronment if the random number generated is above 10.
-# 10 is taken away and stored within store.
-#            
+# Eats 10 values within the environment if the random number generated is above 10.
+# 10 is taken away and stored within store.          
     def eat(self):
         if self.environment[self.y][self.x] > 10:
             self.environment[self.y][self.x] -= 10
             self.store += 10
   
-# identifies if each agents are within 20 unit from each other.If so, thier current variables
-#will changes to share space with one another at an average distance.(object-object communiation)
+# Identifies if each agents are within 20 unit from each other. If so, their current variables
+# Will changes to share space with one another at an average distance (object-object communication).
     def share_with_neighbours(self, neighbourhood):
         for agent in self.agents:
             dist = self.distance_between(agent)
@@ -49,6 +49,6 @@ class Agent:
                 agent.store = ave
                 print("sharing " + str(dist) + " " + str(ave))
 
-#created a function to calculate the distance between coordinates (agents).                
+# Created a function to calculate the distance between coordinates (agents).                
     def distance_between(self, agent):
         return (((self.x - agent.x)**2) + ((self.y - agent.y)**2))**0.5 
