@@ -24,7 +24,7 @@ Leeanna is determine to graduate in GIS with a satisfactory grade to assist in g
 
 ## Python Agent Model
 
-Leeanna has programmed an agent base model which autonomize actions and interactions between agents within a static environment. For instance, a hypothetical scenario of modelling animal presence and interations within a farm depicts the framework of an agent base model. Basic python scrips have been implemented to create object orientated procedures to construct the agent model. Thus, the agent base model contains 10 agents that interact with one another, move randomly (100 iterations), maintain an average distance between one another (if between and equal to 20 units), and simutaneously eating the environment space (raster gid) accordingly to the python implemented syntax's.
+Leeanna has programmed an agent base model which autonomize actions and interactions between agents within a static environment. For instance, a hypothetical scenario of modelling animal presence and interations within a farm depicts the framework of an agent base model. Basic python scrips have been implemented to create object orientated procedures to construct the agent model. Thus, the agent base model contains 10 agents that interact with one another, move randomly (100 iterations), maintain an average distance between one another (if between and equal to 20 units), and simutaneously eat the environment space (raster gid) accordingly to the python implemented caluses. In this scanrio, if a random generated number is below 0.5 the agents will eat the environmetn space until it reaches 10 (10 being the stopping condition).
 
 The below object were mainly used to create and finalize the model.
 
