@@ -92,9 +92,7 @@ def gen_function(b = [0]):
 # Animation = matplotlib.animation.FuncAnimation(fig, update, interval=1, repeat=False, frames=10)
 animation = matplotlib.animation.FuncAnimation(fig, update, frames=gen_function, repeat=False)
 
-# Plots the y/x coordinates (agents) on a grid.
-# Created a for loop to read through the agents and produce a number of 10 agents \n
-# from the num_of_agenst variable, to plot them.
+# sets the y and x limited within a grid.
 # Imshow plots the raster image (environment).
 matplotlib.pyplot.ylim(0, 99)
 matplotlib.pyplot.xlim(0, 99)
