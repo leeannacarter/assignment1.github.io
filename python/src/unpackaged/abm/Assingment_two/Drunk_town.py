@@ -1,6 +1,7 @@
 # Imported modules from pythons library.
 import csv
 import matplotlib.pyplot
+import numpy
 
 # Made 25 drunk agents.
 # Made 25 homes belonging to each drunk.
@@ -24,7 +25,7 @@ for row in dataset:
     for values in row:
         rowlist.append(int(values))
     town.append(rowlist)
-print(town)    
+#print(town)    test
 file.close()
 
 
@@ -34,7 +35,7 @@ while counter <= num_of_houses:
     interval = 10
     house_num.append(interval * counter)
     counter +=1  # Iterates the loop by 1 until it reaches 25.
-print(house_num)
+#print(house_num)  test
 
 #loops through the row of the town file, the the values in the row to find coordinates /n
 #relating to the binary 1's and append to the pub list.
@@ -44,9 +45,17 @@ for y, row in enumerate(town):
             pub.append([y, x])
 print(pub)  
 
+#loops through each proeprty number and appends the coordinates that matches each number /n
+# which is the house and adds the values to a new houses list.
+for prop in house_num:
+    for y, row in enumerate(town):
+        for x, value in enumerate(row):
+            if value == prop:
+                houses.append([value, y, x]) # house number, y and x coordinates
+print(houses) 
 #plots the values to show the towns' environment as file is a raster image.
 #plots the location of the pub.
-#shows the raster image.  
+#shows the raster image which inlcudes the houses.  
 matplotlib.pyplot.imshow(town)
 matplotlib.pyplot.scatter(pub[0][0], pub[0][1])
 matplotlib.pyplot.show() 
