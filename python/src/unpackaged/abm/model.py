@@ -85,7 +85,7 @@ def update(frame_number):
 def gen_function(b = [0]):
     a = 0
     global carry_on 
-    while (a < 10) & (carry_on) :
+    while (a < 10) & (carry_on):
         yield a			# Returns control and waits next call.
         a += 1
 # Repeatedly calls functions to process an animation for the agent model. It also runs in an infinite loop using binary false.
