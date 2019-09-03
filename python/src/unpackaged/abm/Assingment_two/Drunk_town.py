@@ -1,15 +1,21 @@
 # Imported modules from pythons library.
 import csv
 import matplotlib.pyplot
-import numpy
+import journey
+import statistics
 
-# Made 25 drunk agents.
-# Made 25 homes belonging to each drunk.
-# Created a empty list to append the house values to.
-# created a empty town list to convert the csv file to a 2d list to plot on a grid.
-drunk_agents = 25
+# Created 25 drunk agents.
+# Created 25 homes belonging to each drunk.
+# Created an empty drunk agents list to store the y and x moving locations.
+# Created an empty list to append the house values to (door numbers).
+# Created an empty list to append the houses coordinates within.
+# Created an empty town list to convert the csv file to a 2d list to plot on a grid.
+# Created an empty list to append the pub coordinate within.
+num_of_agents = 25
 num_of_houses = 25
-house_num = []
+drunk_agents = []
+door_num = []
+houses = []
 town = []
 pub = []
 counter = 1    # used a counter to map 25 houses.
@@ -33,11 +39,11 @@ file.close()
 # list or door numbers.
 while counter <= num_of_houses:
     interval = 10
-    house_num.append(interval * counter)
+    door_num.append(interval * counter)
     counter +=1  # Iterates the loop by 1 until it reaches 25.
 #print(house_num)  test
 
-#loops through the row of the town file, the the values in the row to find coordinates /n
+#loops through the row of the town file, then the values in the row to find coordinates /n
 #relating to the binary 1's and append to the pub list.
 for y, row in enumerate(town):
     for x, value in enumerate(row):
@@ -45,14 +51,22 @@ for y, row in enumerate(town):
             pub.append([y, x])
 print(pub)  
 
-#loops through each proeprty number and appends the coordinates that matches each number /n
+#loops through each proeprty number, row in town and value in row to appends the coordinates that matches each door number /n
 # which is the house and adds the values to a new houses list.
-for prop in house_num:
+for prop in door_num:
     for y, row in enumerate(town):
         for x, value in enumerate(row):
             if value == prop:
                 houses.append([value, y, x]) # house number, y and x coordinates
 print(houses) 
+
+#loops through 25 agents and appends it to n empty drunk agents list.
+# the journey class method is appened to the agent list.
+# the town environment, drunk agetns and pub is appended to the journery class to allow access to one another.
+for i in range(num_of_agents):
+    drunk_agents.append(journey.Walk(town, drunk_agents, pub, num_of_houses))
+    
+    
 #plots the values to show the towns' environment as file is a raster image.
 #plots the location of the pub.
 #shows the raster image which inlcudes the houses.  
