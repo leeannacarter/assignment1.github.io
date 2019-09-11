@@ -10,8 +10,7 @@ import matplotlib.pyplot
 # created an empty bacteria agents list. 
 y = 5000
 x = 5000
-z = 5000
-num_of_agents = 5000
+num_of_agents = 2
 bacteria = []
 environment = []
 bomb = []
@@ -43,12 +42,17 @@ for y, row in enumerate(environment):
 # the spread class method is appened to the agent list.
 # the environment, bacteria agents and bomb is appended to the spread class to allow access to one another.
 for i in range(num_of_agents):
-    bacteria.append(spread.Agent(environment, bomb, bacteria))
+    bacteria.append(spread.Agent(environment, bomb, bacteria, building_height))
 
 #print(bacteria[i].y, bacteria[i].x) # test the return of get y and x.
     
-
-
+ # iterates through 500 bacteria agents using the spread class function and plots them within the environment.
+for i in range(num_of_agents):
+    while bacteria[i].z > 0:
+        bacteria[i].spread()
+        bacteria[i].height()
+print(bacteria[i].spread(), bacteria[i].height())
+#matplotlib.pyplot.scatter(bacteria[i].x, bacteria[i].y)
 
 # plots the y and x location of the bomb.
 # plots the environment as an image.
