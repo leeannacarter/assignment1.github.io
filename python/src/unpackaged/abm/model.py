@@ -12,9 +12,9 @@ start = time.process_time()
 
 # Created 10 agents.
 # Created 100 iterations to move the agents that many times.
+# Created a neighbourhood variable to allow agents to communicate with each other.
 # Created an empty list to add the x and y values to (agents).
-# Created an empty environment lists to add the in.txt data into.
-# Created a neighbourhood variable to allow agents to communicate with each other.    
+# Created an empty environment lists to add the in.txt data into.    
 num_of_agents = 10
 num_of_iterations = 100
 neighbourhood = 20
@@ -62,7 +62,7 @@ def update(frame_number):
     for j in range(num_of_iterations):
         for i in range(num_of_agents):
             #randomly shuffles the order of agents more.
-            random.shuffle([i])
+            random.shuffle([agents])
             agents[i].move()
             agents[i].eat()
             agents[i].share_with_neighbours(neighbourhood)  
