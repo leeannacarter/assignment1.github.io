@@ -1,4 +1,5 @@
 To run the bacteric_bomb.py script, an integrated develpment environemnt (IDE) is needed, therefore, Anaconda python package needs to be installed.
+Save all the files within thr Assignment_two folder in a folder on desktop.
 Access the command prompt from the windows explorer search bar (Window's user) or terminal (MAC users) and type in spyder followed by the enter key.
 Save the wind.raster.txt in a folder on the Desktop path.
 Copy the code listed within bacteria_bomb.py and paste it into Spyder then select the run button from the run tab or the green arrow icon (7th icon fromt he start).
