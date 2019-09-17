@@ -35,7 +35,7 @@ for row in dataset:
 print(environment)
 file.close()
 
-# Creates an animated figure.
+# Plots a size 7x7 figure.
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_axes([0, 0, 1, 1])
 #ax.set_autoscale_on(False)
@@ -62,7 +62,7 @@ def update(frame_number):
     for j in range(num_of_iterations):
         for i in range(num_of_agents):
             #randomly shuffles the order of agents more.
-            random.shuffle([agents])
+            random.shuffle([i])
             agents[i].move()
             agents[i].eat()
             agents[i].share_with_neighbours(neighbourhood)  
