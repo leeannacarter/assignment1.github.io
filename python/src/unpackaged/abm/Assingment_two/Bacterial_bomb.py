@@ -3,8 +3,7 @@ import csv
 import spread
 import matplotlib
 import matplotlib.pyplot
-import scipy.stats
-import numpy
+
 
 # Created an empty list to append the bomb environment to.
 # Created an empty list to append the bomb location to.
@@ -37,7 +36,7 @@ for y, row in enumerate(environment):
             bomb.append([y, x])
 #print(bomb)  #test
 
-# Creates an animated figure.
+# Plots a size 7x7 figure.
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_axes([0, 0, 1, 1])
 
@@ -57,15 +56,14 @@ for i in range(num_of_agents):
     while bacteria[i].z > 0:
         bacteria[i].move()
         bacteria[i].height()
-#        print(bacteria[i].y, bacteria[i].x) # test to see if the bacteria calculations have worked.
-    matplotlib.pyplot.scatter(bacteria[i].y, bacteria[i].x)   
-
-#plots the density of the bacterial agents.
+#       print(bacteria[i].y, bacteria[i].x) # test to see if the bacteria calculations have worked.
+    environment[bacteria[i].y][bacteria[i].x] += 1 
 
 # plots the y and x location of the bomb.
-# plots the environment as an image.
 # plots the raster x and y values 300x300 on  grid.
-matplotlib.pyplot.imshow(environment)
+#plots the density of the bacterial agents using a copper colour ramp.
+matplotlib.pyplot.scatter(bomb[0][0], bomb[0][1])
 matplotlib.pyplot.xlim(0, len(environment))
 matplotlib.pyplot.ylim(0, len(environment[0]))
+matplotlib.pyplot.imshow(environment, cmap='copper') 
 matplotlib.pyplot.show() 
