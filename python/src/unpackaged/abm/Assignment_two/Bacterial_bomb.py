@@ -8,22 +8,28 @@ import matplotlib.pyplot
 # created an empty bacteria agents list. 
 # Created an empty list to append the bomb environment to.
 # Created an empty list to append the bomb location to.
+# Created an empty list to append the empty environment binary 'zeros' to (empty spaces).
 num_of_agents = 5000
 bacteria = []
 environment = []
 bomb = []
+fallout_plot = []
 
 # Opens and read in the csv datafile of the bomb environment.
+# Appends the empty spaces to a new list.
 # Parses the file to a 2d list.
 file = open("wind.raster.txt")
 dataset = csv.reader(file, delimiter=",")
 # for line in dataset:
 #    print(line) # test: iterates through the file to print each row.
 for row in dataset:
+    fallout_row = []
     rowlist = []
     for values in row:
         rowlist.append(int(values))
+        fallout_row.append(0)
     environment.append(rowlist)
+    fallout_plot.append(fallout_row)
 #print(environment)    #test: iterates through to create a 2d list.
 file.close()
 
@@ -32,7 +38,7 @@ file.close()
 for y, row in enumerate(environment):
     for x, value in enumerate(row):
         if value == 255:
-            bomb.append([y, x])
+            bomb.append([x, y])
 #print(bomb)  #test: prints the location of the bomb.
 
 # Plots a size 7x7 figure.
@@ -52,24 +58,24 @@ for i in range(num_of_agents):
 # while loop takes each agent and connects them to the spread and height class methods to move.
 #The density formed from the spread class methods are plotted to a graph.
 # plots the density.
-for i in range(num_of_agents):
+for i in range(len(bacteria)):
     while bacteria[i].z > 0:
         bacteria[i].move()
         bacteria[i].height()
-#       print(bacteria[i].y, bacteria[i].x) # test: the Spread class has generated answers.
-    environment[bacteria[i].y][bacteria[i].x] += 1 
-matplotlib.pyplot.imshow(environment, cmap='copper') 
+#        print(bacteria[i].y, bacteria[i].x, bacteria[i].z) # test: the Spread class has generated answers.
+    fallout_plot[bacteria[i].y][bacteria[i].x] += 1 
+matplotlib.pyplot.imshow(fallout_plot, cmap='YlOrRd') 
 
 # plots the y and x location of the bomb.
 # plots the raster x and y values 300x300 on  grid.
 # plots the density of the bacterial agents using a copper colour ramp.
 # shows the density pattern as an image.
-matplotlib.pyplot.scatter(bacteria[i].y, bacteria[i].x)
+matplotlib.pyplot.scatter(bomb[0][0], bomb[0][1])
 matplotlib.pyplot.xlim(0, len(environment))
 matplotlib.pyplot.ylim(0, len(environment[0]))
 matplotlib.pyplot.show() 
 
 #saved the density graph to a file as text.
 with open('density_graph.txt', 'w') as graph:
-    graph.write("matplotlib.pyplot.imshow(environment, cmap='copper'")
+    graph.write("matplotlib.pyplot.imshow(environment, cmap='YlOrRd'")
 graph.close()
