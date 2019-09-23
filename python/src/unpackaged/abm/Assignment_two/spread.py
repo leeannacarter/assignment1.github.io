@@ -1,4 +1,4 @@
-#imported moduels from the python library.
+#imported modules from the python library.
 import random
 
 class Agent:
