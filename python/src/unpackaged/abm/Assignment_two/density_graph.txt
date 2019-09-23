@@ -1,1 +1,1 @@
-matplotlib.pyplot.imshow(environment, cmap='copper'
+matplotlib.pyplot.imshow(environment, cmap='YlOrRd'
