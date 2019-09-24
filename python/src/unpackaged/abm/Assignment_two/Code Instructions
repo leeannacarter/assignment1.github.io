@@ -1,6 +1,6 @@
-To run the bacteric_bomb.py script, an integrated develpment environemnt (IDE) is needed, therefore, Anaconda python package needs to be installed.
-Save all the files within thr Assignment_two folder in a folder on desktop.
+To run the bacteria_bomb.py script, an integrated develpment environemnt (IDE) is needed, therefore, Anaconda python package is reccomended to be installed.
+Save all the files within the Assignment_two folder in a folder on the desktop.
 Access the command prompt from the windows explorer search bar (Window's user) or terminal (MAC users) and type in spyder followed by the enter key.
-Save the wind.raster.txt in a folder on the Desktop path.
-Copy the code listed within bacteria_bomb.py and paste it into Spyder then select the run button from the run tab or the green arrow icon (7th icon fromt he start).
-Once ran, the model should produce 
+Open bacteria_bomb within syper.
+Run the code by selecting the run button from the run tab or the green arrow icon (7th icon from the start).
+Once ran, the model should produce a density graph presenting the x and y coordinates of the 5000 bacterial agents.
