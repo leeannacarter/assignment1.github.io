@@ -1,6 +1,7 @@
-To run the bacteria_bomb.py script, an integrated develpment environemnt (IDE) is needed, therefore, Anaconda python package is reccomended to be installed.
-Save all the files within the Assignment_two folder in a folder on the desktop.
+To run the bacteria_bomb.py script, an integrated development environment (IDE) is needed, therefore, Anaconda python package is recommended to be installed.
+Save all the files from the Assignment_two folder into a folder on the desktop.
 Access the command prompt from the windows explorer search bar (Window's user) or terminal (MAC users) and type in spyder followed by the enter key.
-Open bacteria_bomb within syper.
+Open bacteria_bomb.py file within spyder.
 Run the code by selecting the run button from the run tab or the green arrow icon (7th icon from the start).
-Once ran, the model should produce a 300 by 300 density graph presenting the x and y location of the 5000 bacterial agents.
+Once ran, the model should produce a 300 by 300 graph presenting the density of the 5000 bacterial agents y and z location.
+
