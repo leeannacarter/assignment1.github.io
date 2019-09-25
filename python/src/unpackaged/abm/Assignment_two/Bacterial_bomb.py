@@ -1,11 +1,11 @@
-# Imported modules from pythons library.
+# Imported modules from pythons' library.
 import csv
 import spread
 import matplotlib
 import matplotlib.pyplot
 
 # Created 5000 agents.
-# created an empty bacteria agents list. 
+# Created an empty bacteria agents list. 
 # Created an empty list to append the bomb environment to.
 # Created an empty list to append the bomb location to.
 # Created an empty list to append the empty environment binary 'zeros' to (empty spaces).
@@ -33,8 +33,8 @@ for row in dataset:
 #print(environment)    #test: iterates through to create a 2d list.
 file.close()
 
-# loops through the rows of the environment file, then the values in the rows to find coordinates /n
-# relating to the binary 255's (bomb point) to append it to the bomb list.
+# Loops through the rows of the environment file, then the values in the rows to find coordinates /n
+# Relating to the binary 255's (bomb point) to append it to the bomb list.
 for y, row in enumerate(environment):
     for x, value in enumerate(row):
         if value == 255:
@@ -45,37 +45,37 @@ for y, row in enumerate(environment):
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_axes([0, 0, 1, 1])
 
-# Make the agents through adding the random functions to  an empty list.
-# the spread class method is appended to the agent list.
-# the environment, bacterial agents and bomb is appended to the spread class to allow access to one another.
+# Make the agents through adding the random functions to an empty list.
+# The spread class method is appended to the agent list.
+# The environment, bacterial agents and bomb is appended to the spread class to allow access to one another.
 for i in range(num_of_agents):
     bacteria.append(spread.Agent(environment, bacteria, bomb))
 
 #a = spread.Agent(environment, bacteria, bomb)
 #print(a.y, a.x) # test: return the y and x variables.
 
-# iterates through 5000 bacteria.
-# while loop takes each agent and connects them to the spread and height class methods to move.
-#The density formed from the spread class methods are plotted to a graph.
-# plots the density.
+# Iterates through 5000 bacteria.
+# While loop takes each agent and connects them to the spread and height class methods to move.
+# The density formed from the spread class methods are plotted to a graph.
+# Plots the density.
 for i in range(len(bacteria)):
     while bacteria[i].z > 0:
         bacteria[i].move()
         bacteria[i].height()
-#        print(bacteria[i].y, bacteria[i].x, bacteria[i].z) # test: the Spread class has generated answers.
+#        print(bacteria[i].y, bacteria[i].x, bacteria[i].z) # test: Spread and height class function.
     fallout_plot[bacteria[i].y][bacteria[i].x] += 1 
 matplotlib.pyplot.imshow(fallout_plot, cmap='YlOrRd') 
 
-# plots the y and x location of the bomb.
-# plots the raster x and y values 300x300 on  grid.
-# plots the density of the bacterial agents using a copper colour ramp.
-# shows the density pattern as an image.
+# Plots the y and x location of the bomb.
+# Plots the raster x and y values 300x300 on  grid.
+# Plots the density of the bacterial agents using a yellow-red colour ramp.
+# Shows the density pattern as an image.
 matplotlib.pyplot.scatter(bomb[0][0], bomb[0][1])
 matplotlib.pyplot.xlim(0, len(environment))
 matplotlib.pyplot.ylim(0, len(environment[0]))
 matplotlib.pyplot.show() 
 
-#saved the density graph to a file as text.
+# Save's the density graph to a file as text.
 with open('density_graph.txt', 'w') as graph:
     graph.write("matplotlib.pyplot.imshow(environment, cmap='YlOrRd'")
 graph.close()
